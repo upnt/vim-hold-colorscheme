@@ -1,5 +1,5 @@
 augroup VimHoldColorscheme
     au!
-    au VimEnter * lua require('load_colorscheme')
-    au VimLeave * lua require('save_colorscheme')
+    au SourcePost * lua require('load_colorscheme')
+    au ExitPre * lua require('save_colorscheme')
 augroup END
