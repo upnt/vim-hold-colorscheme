@@ -3,8 +3,7 @@ if !exists('g:colorschemepath')
 endif
 
 if !isdirectory(g:colorschemepath)
-    echo 'can not find colorscheme directory'
-    finish
+    mkdir(g:colorschemepath)
 endif
 
 if !filereadable(g:colorschemepath . '/colorscheme.txt')
