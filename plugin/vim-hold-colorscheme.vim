@@ -1,18 +1,14 @@
 if !exists('g:colorschemepath')
-    g:colorschemepath = stdpath('config')
+    let g:colorschemepath = stdpath('config')
 endif
 
 if !isdirectory(g:colorschemepath)
-    print('can not find ' . g:colorschemepath)
+    echo 'can not find colorscheme directory'
     finish
 endif
 
-if !filereadable(g:colorschemepath . 'colorscheme.txt')
-    lua >> EOF
-    f = io.open(vim.g.colorschemepath..'/colorscheme.txt', "w")
-    f:write('default')
-    f:close()
-    EOF
+if !filereadable('colorscheme.txt')
+    lua require('setup')
 endif
 
 augroup VimHoldColorscheme
