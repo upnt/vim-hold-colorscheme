@@ -7,7 +7,7 @@ if !isdirectory(g:colorschemepath)
     finish
 endif
 
-if !filereadable('colorscheme.txt')
+if !filereadable(g:colorschemepath . '/colorscheme.txt')
     lua require('setup')
 endif
 
