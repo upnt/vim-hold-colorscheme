@@ -1,5 +1,5 @@
 if !exists('g:colorschemepath')
-    let g:colorschemepath = stdpath('config')
+    let g:colorschemepath = expand('~/.cache/colorscheme')
 endif
 
 if !isdirectory(g:colorschemepath)
