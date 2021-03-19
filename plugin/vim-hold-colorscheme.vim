@@ -3,7 +3,7 @@ if !exists('g:colorschemepath')
 endif
 
 if !isdirectory(g:colorschemepath)
-    mkdir(g:colorschemepath)
+    call mkdir(g:colorschemepath, "p")
 endif
 
 if !filereadable(g:colorschemepath . '/colorscheme.txt')
